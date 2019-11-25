@@ -1,0 +1,135 @@
+body {
+	/*
+  background-image: linear-gradient(to bottom right, #0BADBF, #ADD4D9);
+  background-repeat: no-repeat;
+  height: 1800px;
+  background-size: cover;
+  */
+  background-color: #0BADBF;
+}
+
+h1 {
+	font-family: 'Calistoga', cursive;
+}
+
+.ct {
+	text-align: center;
+	margin: 20px;
+}
+
+.principal-div {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.sec-div {
+	padding: 10px;
+	text-align: center;
+	margin: 0 auto;
+	height: 400px;
+}
+
+.mg-b {
+	margin-bottom: 50px;
+}
+
+.clock-div {
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+	align-content: center;
+}
+
+.img {
+	border: 3px solid #D94A3D;
+	border-radius: 10px;
+	height: 390px;
+	width: 460px;
+}
+
+.img:hover {
+	border: 3px solid #F2AC57;
+}
+
+.clock {
+	margin: 0px auto;
+	font-size: 38px;
+	color: #D94A3D;
+	border-radius: 25px;
+	border: 2px solid #D94A3D;
+	padding: 10px;
+	width: 90px;
+	height: 90px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.startButton {
+	width: 200px;
+	height: 300px;
+	text-align: center;
+	padding: 10px;
+	padding-top: 50px;
+	border: 5px solid #D94A3D;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 200px;
+	color: #D94A3D;
+	font-family: 'Calistoga', cursive;
+}
+
+.startButton:hover {
+	border: 5px solid #F2AC57;
+	border-radius: 20px;
+	color: #F2AC57;
+}
+
+.textButton {
+	text-align: center;
+	color: blue;
+}
+
+#resultado {
+    margin : 20px auto;
+    background-color: white;
+    opacity: 0.8;
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    display: none;
+    margin-top: 70px;
+}
+
+#resultado img {
+    position: absolute;
+    top:100px;
+    left:325px;
+}
+#resultado p {
+    position: absolute;
+    display: block;
+    width : 59px;
+    height : 59px;
+    top: 200px;
+    left: 300px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#start p {
+	font-size: 2em;
+}
+
+.contenedor {
+    margin : 20px auto;
+    background-color: white;
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+}
