@@ -93,7 +93,7 @@ h1 {
 }
 
 .portada {
-	background-image: url(img/portada.jpg);
+	background-image: url(../img/portada.jpg);
   	background-repeat: no-repeat;
  	background-size: cover;
   	background-color: #000000;

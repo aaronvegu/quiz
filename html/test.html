@@ -6,8 +6,10 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Chart.js CSS -->
+	<link rel="stylesheet" href="../css/Chart.min.css">
 	<!-- Local CSS -->
-	<link rel="stylesheet" href="quiz-style.css">
+	<link rel="stylesheet" href="../css/quiz-style.css">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 
@@ -31,7 +33,7 @@
 
 		<!-- DOS IMAGENES -->
 		<div class="row" style="display: none;" id="quiz">
-			<div class="col-12">
+			<div class="col-12" id="tituloQ">
 				<h1 class="ct">Elige la foto que prefieras: </h1>
 			</div>
 			<div class="col-12 principal-div">
@@ -48,7 +50,7 @@
 
 		<!-- MONOIMAGEN -->
 		<div class="row" style="display: none;" id="quizPreguntas">
-			<div class="col-12">
+			<div class="col-12" id="tituloQP">
 				<h1 class="ct">¿Te gusta el tuit?</h1>
 			</div>
 			<div class="col-12 principal-div">
@@ -86,6 +88,6 @@
 	</div>
 
 	<!-- JS Code -->
-	<script src="quiz.js"></script>	
+	<script src="../js/quiz.js"></script>	
 </body>
 </html>
