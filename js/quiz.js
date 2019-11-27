@@ -7,7 +7,7 @@ const counter = document.getElementById("counter");
 const bar = document.getElementById("bar");
 const respuestaA = document.getElementById("A");
 const respuestaB = document.getElementById("B");
-const resultado = document.getElementById("resultado");
+const resultado = document.getElementById("datos");
 const quizPreguntas = document.getElementById("quizPreguntas");
 const btnsi = document.getElementById("si");
 const btnno = document.getElementById("no");
@@ -15,6 +15,11 @@ const monoimg = document.getElementById("monoimg");
 const divCounter = document.getElementById("divCounter");
 const tituloQ = document.getElementById("tituloQ");
 const tituloQP = document.getElementById("tituloQP");
+//const datos = document.getElementById("datos");
+const mensaje1 = document.getElementById("p-mensaje1");
+const mensaje2 = document.getElementById("p-mensaje2");
+const tit = document.getElementById("tit")
+const grafica = document.getElementById("resultado");
 
 // Listeners
 startButton.addEventListener("click", startQuiz);
@@ -320,7 +325,9 @@ function contador() {
 	} else {
 		// De no haber mas preguntas, terminamos el quiz y detenemos el tiempo
 		console.log(`"El quiz ha terminado con la calificacion: \nClasismo: ${clasismo}\nRacismo: ${racismo}\nMachismo: ${machismo}."`);
+		quizPreguntas.style.display = "none";
 		quizDiv.style.display = "none";
+		divCounter.style.display = "none";
 		clearInterval(TIMER);
 		mostrarResultado();
 		}
@@ -350,7 +357,9 @@ function score(c, r, m) {
 	} else {
 		// De no haber mas preguntas, terminamos el quiz y detenemos el tiempo
 		console.log(`"El quiz ha terminado con la calificacion: \nClasismo: ${clasismo}\nRacismo: ${racismo}\nMachismo: ${machismo}"`);
+		quizPreguntas.style.display = "none";
 		quizDiv.style.display = "none";
+		divCounter.style.display = "none";
 		clearInterval(TIMER);
 		mostrarResultado();
 	}
@@ -358,20 +367,58 @@ function score(c, r, m) {
 
 // Funcion para mostrar el resultado
 function mostrarResultado() {
+
 	resultado.style.display = "block";
+	grafica.style.display = "block";
 
-	const porcentaje = 100 * (calificacion / preguntas.length);
+	const total = clasismo + racismo + machismo;
+	
 
-	let img = 	(porcentaje >= 80) ? "img/5.png" :
-				(porcentaje >= 60) ? "img/4.png" :
-				(porcentaje >= 40) ? "img/3.png" :
-				(porcentaje >= 20) ? "img/2.png" :
-				"img/1.png";
+	if (total >= 180) {
+		mensaje1.style.display = "block";
+	} else {
+		mensaje2.style.display = "block";
+	}
 
-	resultado.innerHTML = `<img src="${img}">`;
-	resultado.innerHTML += `<p>Resultado: ${porcentaje}%</p>`;
+	console.log("Total: " + total);
+
+	// Chart
+	let myChart = document.getElementById("myChart").getContext("2d");
+
+	let barChart = new Chart(myChart, {
+		type: "bar",
+		data: {
+			labels: ["Racista", "Clasista", "Machista"],
+			datasets: [{
+				label: "Porcentaje",
+				data: [racismo, clasismo, machismo]
+			}],
+			backgroundColor: "rgba(254, 233, 239, 0.6)",
+			borderWidth: 4,
+			borderColor: "#000"
+		},
+		options: {
+			scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero: true
+	                }
+	            }]
+	        }
+		},
+		
+	});
 
 }
+
+
+
+
+
+
+
+
+
 
 
 

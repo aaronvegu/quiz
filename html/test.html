@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="../css/quiz-style.css">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+	<!-- Chart.js JS -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
 </head>
 <body>
@@ -82,12 +84,38 @@
 		</div>
 
 		<!-- RESULTADO -->
-		<div class="row" id="resultado">
+		<div style="display: none;" id="datos">
+			<div class="row" id="tit">
+				<div class="col-12 ct mt">
+					<h1>Tus Resultados: </h1>
+				</div>
+			</div>
+			<div class="row" style="display: none;" id="resultado">
+				<div class="col-12 chart-container">
+					<canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8 mensaje">
+					<p class="p" id="p-mensaje1" style="display: none;">
+						Te damos la bienvenida a lo que fue un hackeo acerca de prácticas y representaciones sociales que reproduces a partir de tu selección de imágenes y textos recopilados de distintas redes sociales y algunas otras maneras de adquirir información.
+						<br><br>
+						Como podrás darte cuenta con los resultados del test, no estás excentx de ser una persona con prácticas machistas, racistas o clasistas, pero nuestro objetivo no es ofenderte ni mucho menos, sino brindarte esta herramienta para hacerte saber que no somos externos a las situaciones de discriminación y sesgo, pues en varias ocasiones (de manera consciente o no) aportamos a que esto siga sucediendo. Consideramos importante que, a partir de esto, podamos hacernos responsables de nuestras actitudes y prácticas de una cierta blanquitud y prestigio que el privilegio nos permite. <br><br> Todos somos whitexicans hasta cierto punto, es cuestión de reconocerlo y tratar de modificarlo, así como nosotros tratamos de modificar el código en el que los test son aplicados y la manera en la que son usados por ustedes los usuarios.
+					</p>
+					<p class="p" id="p-mensaje2" style="display: none;">
+						Te damos la bienvenida a lo que fue un hackeo acerca de prácticas y representaciones sociales que reproduces a partir de tu selección de imágenes y textos recopilados de distintas redes sociales y algunas otras maneras de adquirir información.
+						<br><br>
+						Como podrás darte cuenta con los resultados del test, tus porcentajes de prácticas machistas, racistas o clasistas fueron bajos, y nos da mucho gusto que ya sea inconsciente o no, tus representaciones hacia los demás se destacarían por no tener contenido discriminatorio. Aun así, nuestro objetivo es el de brindarte esta herramienta para hacerte saber que no somos externos a las situaciones de discriminación y sesgo, pues en varias ocasiones (de manera consciente o no) aportamos a que esto siga sucediendo. Consideramos importante que, a partir de esto, podamos hacernos responsables de nuestras actitudes y prácticas de una cierta blanquitud y prestigio que el privilegio nos permite. <br><br> Todos somos whitexicans hasta cierto punto, es cuestión de reconocerlo y tratar de modificarlo, así como nosotros tratamos de modificar el código en el que los test son aplicados y la manera en la que son usados por ustedes los usuarios.
 
+					</p>
+				</div>
+			</div>
 		</div>
+		
 	</div>
 
-	<!-- JS Code -->
+	<!-- JS Code -->	
 	<script src="../js/quiz.js"></script>	
+
 </body>
 </html>
