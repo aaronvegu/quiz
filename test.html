@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Local CSS -->
+	<link rel="stylesheet" href="quiz-style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container-fluid">
+
+		<!-- START QUIZ -->
+		<div class="row" style="display: block;" id="start"> <!-- Cambiar a block -->
+			<div class="col-12">
+				<div class="startButton" id="startButton">
+					<p>¡Iniciar Quiz!</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-12 nota">
+				<div>
+					<h5>NOTA:<br>Recuerda que tendras un límite de tiempo para contestar cada pregunta, no lo pienses demasiado.</h5>
+				</div>
+			</div>
+		</div>
+
+		<!-- DOS IMAGENES -->
+		<div class="row" style="display: none;" id="quiz">
+			<div class="col-12">
+				<h1 class="ct">Elige la foto que prefieras: </h1>
+			</div>
+			<div class="col-12 principal-div">
+				<div class="row">
+					<div id="A" class="col-12 col-lg-5 sec-div mg-b">
+						
+					</div>
+					<div id="B" class="col-12 col-lg-5 sec-div mg-b">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MONOIMAGEN -->
+		<div class="row" style="display: none;" id="quizPreguntas">
+			<div class="col-12">
+				<h1 class="ct">¿Te gusta el tuit?</h1>
+			</div>
+			<div class="col-12 principal-div">
+				<div class="row">
+					<div id="monoimg" class="col-12 sec-div mg-b">
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12 col-lg-6 ct" id="si">
+						
+					</div>
+					<div class="col-12 col-lg-6 ct" id="no">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="display: none;" id="divCounter">
+			<div class="col-12 clock-div">
+				<p class="clock" id="counter"></p>
+				<div class="progress mx-auto" style="height: 10px; width: 20%;">
+					<div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="bar" style="background-color:#494646 !important;"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- RESULTADO -->
+		<div class="row" id="resultado">
+
+		</div>
+	</div>
+
+	<!-- JS Code -->
+	<script src="quiz.js"></script>	
+</body>
+</html>

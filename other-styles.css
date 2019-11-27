@@ -1,0 +1,79 @@
+
+body {
+	background-color: #494646;
+}
+
+hr {
+	border: 1px solid white;
+}
+
+h1 {
+	font-family: 'Calistoga', cursive;
+	color: #FFF5F6;
+	font-size: 3.2em;
+}
+
+.p {
+	font-family: 'Calistoga', cursive;
+	color: #FFF5F6;
+	font-size: 1.8em;
+	margin-top: 50px;
+}
+
+.pr {
+	border: 5px solid red;
+}
+
+.ct {
+	text-align: center;
+}
+
+.pd {
+	padding-top: 100px;
+}
+
+.info {
+	padding: 40px;
+}
+
+.pretest-img {
+	max-height: 700px;
+	margin: 0 auto;
+	padding: 60px 30px;
+}
+
+.acerca-img {
+	max-height: 500px;
+	margin: 0 auto;
+	padding: 20px 10px;
+	border: 3px solid #FFFFFF;
+	margin-top: 50px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.mt {
+	margin-top: 50px;
+}
+
+.space {
+	height: 30px;
+}
+
+.empty-div {
+	height: 200px;
+}
+
+.boton {
+	margin-top: 100px;
+	font-family: 'Abril Fatface', cursive;
+	padding: 20px;
+	font-size: 1.1em;
+	background-color: #FFF5F6;
+}
+
+#resize-p {
+	font-size: 1.4em;
+}
+
