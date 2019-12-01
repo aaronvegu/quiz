@@ -21,12 +21,39 @@ canvas {
 	margin: 0 auto;
 }
 
+hr {
+	border: 2px solid #FFFFFF;
+	width: 50%;
+}
+
 .p {
 	font-family: 'Calistoga', cursive;
 	color: #FFF5F6;
 	font-size: 1.5em;
 	margin-top: 50px;
 	letter-spacing: 1px;
+}
+
+.space {
+	height: 200px;
+}
+
+.seccion-titulo p {
+	padding: 20px;
+	margin: 20px;
+	font-family: 'Calistoga', cursive;
+	font-size: 55px;
+	text-align: center;
+	color: #FFF5F6;
+}
+
+.seccion-subtitulo p {
+	padding: 20px;
+	margin: 0 auto;
+	font-family: 'Calistoga', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: #FFFFFF;
 }
 
 .vs {
@@ -139,6 +166,22 @@ canvas {
 	height: 50px;
 	border: 3px solid white;
 	margin: 20px;
+}
+
+.submit {
+	font-family: 'Calistoga', cursive;
+	padding: 10px;
+	font-size: 1.1em;
+	background-color: #FFF5F6;
+	width: 200px;
+	height: 70px;
+	border: 3px solid white;
+	margin: 20px;
+}
+
+#botonMod {
+	width: 150px;
+	height: 70px;
 }
 
 #resultado {

@@ -20,6 +20,10 @@ const mensaje1 = document.getElementById("p-mensaje1");
 const mensaje2 = document.getElementById("p-mensaje2");
 const tit = document.getElementById("tit")
 const grafica = document.getElementById("resultado");
+const seccion = document.getElementById("seccion");
+const tituloSeccion = document.getElementById("titulo-seccion");
+const subtituloSeccion = document.getElementById("subtitulo-seccion");
+const send = document.getElementById("send");
 
 // Listeners
 startButton.addEventListener("click", startQuiz);
@@ -27,239 +31,258 @@ startButton.addEventListener("click", startQuiz);
 // Preguntas
 let preguntas = [
 	{
-		img : "../img/tuit1.jpg",
+		img : "img/tuit1.jpg",
 		c : 5,
 		r : 5,
 		m : 7,
 		title : "¿Te gusta el tuit?",
 	}, {
-		img : "../img/tuit2.jpg",
+		img : "img/tuit2.jpg",
 		c : 5,
 		r : 5,
 		m : 7,
 		title : "¿Te gusta el tuit?",
 	}, {
-		img : "../img/tuit3.jpg",
+		img : "img/tuit3.jpg",
 		c : 5,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta el tuit?",
 	}, {
-		img : "../img/tuit4.jpg",
+		img : "img/tuit4.jpg",
 		c : 0,
 		r : 0,
 		m : 7,
 		title : "¿Te gusta el tuit?",
 	}, {
-		img : "../img/tuit5.jpg",
+		img : "img/tuit5.jpg",
 		c : 0,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta el tuit?",
 	}, {
-		img1 : "../img/1i.png",
+		img1 : "img/1i.png",
 		ci : 0,
 		ri : 0,
 		mi : 0,
-		img2 : "../img/1d.png",
+		img2 : "img/1d.png",
 		cd : 5,
 		rd : 5,
 		md : 0,
-		title : "¿Qué foto prefieres?",
+		title : "¿Qué foto publicarías?",
 	}, {
-		img1 : "../img/2i.png",
+		img1 : "img/2i.png",
 		ci : 0,
 		ri : 0,
 		mi : 0,
-		img2 : "../img/2d.png",
+		img2 : "img/2d.png",
 		cd : 5,
 		rd : 5,
 		md : 0,
-		title : "¿Qué foto prefieres?",
+		title : "¿Qué foto publicarías?",
 	}, {
-		img1 : "../img/3i.png",
+		img1 : "img/3i.png",
 		ci : 0,
 		ri : 0,
 		mi : 0,
-		img2 : "../img/3d.png",
+		img2 : "img/3d.png",
 		cd : 5,
 		rd : 5,
 		md : 0,
-		title : "¿Qué foto prefieres?",
+		title : "¿Qué foto publicarías?",
 	}, {
-		img1 : "../img/4i.png",
+		img1 : "img/4i.png",
 		ci : 5,
 		ri : 5,
 		mi : 0,
-		img2 : "../img/4d.png",
+		img2 : "img/4d.png",
 		cd : 0,
 		rd : 0,
 		md : 0,
-		title : "¿Qué foto prefieres?",
+		title : "¿Qué foto publicarías?",
 	}, {
-		img : "../img/yt1.png",
+		img : "img/yt1.png",
 		c : 5,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt2.png",
+		img : "img/yt2.png",
 		c : 0,
 		r : 0,
 		m : 7,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt3.png",
+		img : "img/yt3.png",
 		c : 5,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt4.png",
+		img : "img/yt4.png",
 		c : 5,
 		r : 0,
 		m : 7,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt5.png",
+		img : "img/yt5.png",
 		c : 0,
 		r : 0,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt6.png",
+		img : "img/yt6.png",
 		c : 0,
 		r : 0,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt7.png",
+		img : "img/yt7.png",
 		c : 0,
 		r : 0,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt8.png",
+		img : "img/yt8.png",
 		c : 5,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt9.png",
+		img : "img/yt9.png",
 		c : 5,
 		r : 5,
 		m : 7,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt10.png",
+		img : "img/yt10.png",
 		c : 5,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/yt11.png",
+		img : "img/yt11.png",
 		c : 5,
 		r : 5,
 		m : 0,
 		title : "¿Te gusta este canal?",
 	}, {
-		img : "../img/f1.png",
-		c : 0,
-		r : 0,
-		m : 7,
-		title : "¿Le darías Me Gusta a esta imagen?",
-	}, {
-		img : "../img/f2.png",
-		c : 5,
-		r : 5,
-		m : 0,
-		title : "¿Le darías Me Gusta a esta imagen?",
-	}, {
-		img : "../img/f3.png",
-		c : 5,
-		r : 5,
-		m : 0,
-		title : "¿Le darías Me Gusta a esta imagen?",
-	}, {
-		img : "../img/f4.png",
+		img : "img/f1.png",
 		c : 0,
 		r : 0,
 		m : 7,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/f5.png",
-		c : 0,
-		r : 0,
+		img : "img/f2.png",
+		c : 5,
+		r : 5,
 		m : 0,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/f6.png",
-		c : 0,
-		r : 0,
+		img : "img/f3.png",
+		c : 5,
+		r : 5,
 		m : 0,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/f7.png",
+		img : "img/f4.png",
 		c : 0,
 		r : 0,
 		m : 7,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/f8.png",
+		img : "img/f5.png",
+		c : 0,
+		r : 0,
+		m : 0,
+		title : "¿Le darías Me Gusta a esta imagen?",
+	}, {
+		img : "img/f6.png",
+		c : 0,
+		r : 0,
+		m : 0,
+		title : "¿Le darías Me Gusta a esta imagen?",
+	}, {
+		img : "img/f7.png",
+		c : 0,
+		r : 0,
+		m : 7,
+		title : "¿Le darías Me Gusta a esta imagen?",
+	}, {
+		img : "img/f8.png",
 		c : 0,
 		r : 5,
 		m : 7,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/f9.png",
+		img : "img/f9.png",
 		c : 0,
 		r : 0,
 		m : 0,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/f10.png",
+		img : "img/f10.png",
 		c : 0,
 		r : 0,
 		m : 0,
 		title : "¿Le darías Me Gusta a esta imagen?",
 	}, {
-		img : "../img/info1.png",
+		img : "img/info1.png",
 		c : 5,
 		r : 5,
 		m : 7,
-		title : "¿Sigues o usas este programa de consumo de información?",
+		title : "¿Cuál de estos portales utilizas? Selecciona la foto",
 	}, {
-		img : "../img/info2.png",
+		img : "img/info2.png",
 		c : 0,
 		r : 0,
 		m : 0,
-		title : "¿Sigues o usas este programa de consumo de información?",
+		title : "¿Cuál de estos portales utilizas? Selecciona la foto",
 	}, {
-		img : "../img/info3.png",
+		img : "img/info3.png",
 		c : 0,
 		r : 0,
 		m : 7,
-		title : "¿Sigues o usas este programa de consumo de información?",
+		title : "¿Cuál de estos portales utilizas? Selecciona la foto",
 	}, {
-		img : "../img/info4.png",
+		img : "img/info4.png",
 		c : 5,
 		r : 5,
 		m : 7,
-		title : "¿Sigues o usas este programa de consumo de información?",
+		title : "¿Cuál de estos portales utilizas? Selecciona la foto",
 	}, {
-		img : "../img/info5.png",
+		img : "img/info5.png",
 		c : 5,
 		r : 5,
 		m : 7,
-		title : "¿Sigues o usas este programa de consumo de información?",
+		title : "¿Cuál de estos portales utilizas? Selecciona la foto",
 	},
+];
+
+let secciones = [
+	{
+		titulo : "TWITTER",
+		subtitulo : "¿Que tweet prefieres? Elige sí o no"
+	}, {
+		titulo : "INSTAGRAM",
+		subtitulo : "¿Qué foto publicarías? Selecciona la foto"
+	}, {
+		titulo : "YOUTUBE",
+		subtitulo : "¿A quién seguirías?"
+	}, {
+		titulo : "FACEBOOK",
+		subtitulo : "¿A cual meme le darías like? Elige sí o no"
+	}, {
+		titulo : "CONSUMO DE INFORMACIÓN",
+		subtitulo : "¿Cuál de estos portales utilizas? Selecciona la foto"
+	}
 ];
 
 // Variables
 const ultPregunta = preguntas.length - 1;
 let preguntaActual = 0;
 let count = 0;
-let tiempo = 10; // 15s
+let tiempo = 13; // 15s
 const longitud = 100; // 100%
 const unidad = longitud / tiempo;
 let TIMER;
@@ -291,7 +314,7 @@ function crearPregunta() {
 }
 
 function crearInsta() {
-	console.log("Entra Insta");
+	//console.log("Entra Insta");
 	let i = preguntas[preguntaActual];
 	respuestaA.innerHTML = `<div onclick="score(${i.ci}, ${i.ri}, ${i.mi})"><img src="${i.img1}" class="img"></div>`;
 	respuestaB.innerHTML = `<div onclick="score(${i.cd}, ${i.rd}, ${i.md})"><img src="${i.img2}" class="img"></div>`;
@@ -311,15 +334,22 @@ function contador() {
 	if (preguntaActual < ultPregunta) {
 		if (preguntaActual > 3 && preguntaActual < 8) {
 			// Preguntas de Instagram segun el orden en el array
-			tiempo = 7;
-			preguntaActual++;
+				//seccion.style.display = "none";
 			quizPreguntas.style.display = "none";
 			quizDiv.style.display = "block";
+				//divCounter.style.display = "block";
+				//if (preguntaActual == 4) { // Entra seccion de Instagram
+					//mostrarSeccion(1);
+					//console.log("Seccion Instagram");
+				//}
+			preguntaActual++;
 			crearInsta();
 		} else {
-			preguntaActual++;
+			//seccion.style.display = "none";
 			quizDiv.style.display = "none";
 			quizPreguntas.style.display = "block";
+			//divCounter.style.display = "block";
+			preguntaActual++;
 			crearPregunta();
 		}
 	} else {
@@ -344,14 +374,22 @@ function score(c, r, m) {
 	if (preguntaActual < ultPregunta) {
 		if (preguntaActual > 3 && preguntaActual < 8) {
 			// Preguntas de Instagram segun el orden en el array
-			preguntaActual++;
+				//seccion.style.display = "none";
 			quizPreguntas.style.display = "none";
 			quizDiv.style.display = "block";
+				//divCounter.style.display = "block";
+				//if (preguntaActual == 4) { // Entra seccion de Instagram
+					//mostrarSeccion(1);
+					//console.log("Seccion Instagram");
+				//}
+			preguntaActual++;
 			crearInsta();
 		} else {
-			preguntaActual++;
+			//seccion.style.display = "none";
 			quizDiv.style.display = "none";
 			quizPreguntas.style.display = "block";
+			//divCounter.style.display = "block";
+			preguntaActual++;
 			crearPregunta();
 		}
 	} else {
@@ -374,7 +412,7 @@ function mostrarResultado() {
 	const total = clasismo + racismo + machismo;
 	
 
-	if (total >= 180) {
+	if (total >= 120) {
 		mensaje1.style.display = "block";
 	} else {
 		mensaje2.style.display = "block";
@@ -411,6 +449,34 @@ function mostrarResultado() {
 
 }
 
+function mostrarSeccion(tipo) {
+	let s = secciones[tipo];
+
+	quizDiv.style.display = "none";
+	quizPreguntas.style.display = "none";
+	divCounter.style.display = "none";
+	seccion.style.display = "block";
+
+	tituloSeccion.innerHTML = `<p>${s.titulo}</p>`;
+	subtituloSeccion.innerHTML = `<p>${s.subtitulo}</p>`;
+
+	//setTimeout(contador, 3000);
+}
+
+function post() { // Envio de los resultados al servidor
+	console.log("Send pressed");
+
+	let resClasismo = clasismo;
+	let resRacismo = racismo;
+	let resMachismo = machismo;
+
+	$.post('../php/envioResultados.php', {
+			postClasismo: resClasismo,
+			postRacismo: resRacismo,
+			postMachismo: resMachismo
+		}
+	);
+}
 
 
 

@@ -7,13 +7,17 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- Chart.js CSS -->
-	<link rel="stylesheet" href="../css/Chart.min.css">
+	<link rel="stylesheet" href="css/Chart.min.css">
 	<!-- Local CSS -->
-	<link rel="stylesheet" href="../css/quiz-style.css">
+	<link rel="stylesheet" href="css/quiz-style.css">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 	<!-- Chart.js JS -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+	<!-- FontAwesome CDN -->
+	<script src="https://kit.fontawesome.com/de21fdf140.js" crossorigin="anonymous"></script>
+	<!-- JQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -112,11 +116,42 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- VER RESULTADOS -->
+		<div class="row" id="send" style="display: none;">
+			<div class="col-12 space">
+				
+			</div>
+			<div class="col ct">
+				<h1>¡Has terminado!</h1>
+				<form>
+					<input type="button" value="Ver Resultados" onclick="post();" class="btn btn-light submit">
+				</form>
+				<h1 id="result"></h1>
+			</div>
+			
+			<div class="col-12 space">
+				
+			</div>
+		</div>
+
+		<!-- SECCIONES -->
+		<div class="row" id="seccion" style="display: none;">
+			<div class="col-12 space">
+				
+			</div>
+			<div class="col-12 seccion-titulo" id="titulo-seccion">
+				<hr>
+			</div>
+			<div class="col-12 seccion-subtitulo" id="subtitulo-seccion">
+
+			</div>
+		</div>
 		
 	</div>
 
 	<!-- JS Code -->	
-	<script src="../js/quiz.js"></script>	
+	<script type="text/javascript" src="js/quiz.js"></script>
 
 </body>
 </html>
